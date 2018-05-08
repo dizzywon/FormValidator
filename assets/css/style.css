@@ -17,7 +17,7 @@ span,
 a,
 h1,
 h2,
-h3,
+h3, 
 h4,
 h5,
 h6,
@@ -26,13 +26,6 @@ p {
   padding: 0;
   font-family: 'Nunito', sans-serif;
   text-rendering: optimizeLegibility; }
-
-
-body
-{
-	background-color: #333;
-}
-
 
 p
 {
@@ -45,79 +38,95 @@ p
 	background-position: center;
 	height: 100%;
 }
-.login-box{
-	 width: 400px;
-	 height: 500px;
-	 position: absolute;
-	 top: 50%;
-	 left: 50%;
-	 transform: translate(-50%, -50%);
-	 color: white;
-	 background: rgba(0, 0, 0, 0.6);
-	 padding: 40px;
-	 box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
-}
-.login-box h1{
-	float: left;
-	font-size: 35px;
-	border-bottom: 4px solid #4caf50;
-	margin-bottom: 30px;
-	padding: 13px 0;
 
-}
-.form-group{
-	width: 100%;
-	overflow: hidden;
-	font-size: 20px;
-	padding:  10px 0;
-	margin: 10px 0;
-	border-bottom: 1px solid #4caf50;
-}
-.form-group p{
-	margin: 0;
-	padding: 0;
-	font-size: 18px;
-}
+@media only screen and (min-width: 728px) {
+	.login-box{
+		width: 400px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+		background: rgba(0, 0, 0, 0.6);
+		padding: 50px;
+		box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+		border-radius: 5px;
+	}
+	.login-box h1{
+		font-size: 35px;
+		margin: 0 0 30px;
+		padding: 0;
+		color:  #fff;
+		text-align: center;
 
-input[type="email"],
-input[type="password"]{
-	border:  none;
-	outline: none;
-	background: transparent;
-	color: #fff;
-	width: 75%;
-	margin-bottom: 10px;
-}
-::placeholder{
-	color: lightgrey;
-}
-.btn{
-	margin-top: 20px;
-	margin-bottom: 20px;
-	width: 100%;
-	background: #4caf50;
-	border:  none;
-	color: #fff;
-	padding: 5px;
-	height: 40px;
-	border-radius: 20px;
-	font-size: 16px;
-	font-weight: bold;
-	cursor: pointer;
-	outline: none;
-	font-family: 'Nunito', sans-serif;
-}
-.btn:hover{
-	background: transparent;
-	color: #fff;
-	border: 2px solid #4caf50;
-}
-.password-forget{
-	color: #fff;
-	text-decoration: none;
-}
+	}
+	.login-box .form-group{
+		position: relative;
+	}
 
 
+	.login-box .form-group input{
+		width: 100%;
+		padding: 10px 0;
+		font-size: 16px;
+		color: #fff;
+		margin-bottom: 30px;
+		border: none;
+		border-bottom: 1px solid #4caf50;
+		outline: none;
+		background: transparent;
+	}
+	.login-box .form-group #strength{
+		position: absolute;
+		top: -3px;
+		right: 5%;
+	}
+	.login-box .form-group label{
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 16px;
+		padding:  10px 0;
+		color: #fff;
+		pointer-events: none;
+		transition: .5s;
+	}
+	.login-box .form-group input:focus ~ label,
+	.login-box .form-group input:valid ~ label {
+		top: -20px;
+		left: 0;
+		color: #4caf50;
+		font-size: 13px;
+	}
+
+	.btn{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 100%;
+		background: #4caf50;
+		border:  none;
+		color: #fff;
+		padding: 5px;
+		height: 40px;
+		border-radius: 15px;
+		font-size: 16px;
+		font-weight: bold;
+		cursor: pointer;
+		outline: none;
+		font-family: 'Nunito', sans-serif;
+	}
+	.btn:hover{
+		background: #3d8340;
+		color: #fff;
+	}
+	.password-forget{
+		color: #fff;
+		text-decoration: none;
+	}
+	.password-forget:hover{
+		color:#4caf50; 
+	}
+}
 
 
 
